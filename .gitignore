@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# Node / frontend
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+.vite/
+
+# Local runtime output
+*.log
+*.err.log
+.cricket_cache/
+ids_project/.cricket_cache/
+
+# Oversized generated/raw datasets exceed GitHub's 100 MB file limit.
+ids_project/data/cricsheet/*.csv
+ids_project/data/final/player_innings_1877_2025.csv
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Environment files
+.env
+.env.*

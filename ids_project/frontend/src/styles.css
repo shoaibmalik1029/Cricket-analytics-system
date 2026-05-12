@@ -1,0 +1,540 @@
+:root {
+  font-family: "Manrope", sans-serif;
+  color: #10263f;
+  background: #f3efe9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f7f4ee 0%, #f0ece6 100%);
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background: linear-gradient(180deg, #153653 0%, #12304b 100%);
+  color: white;
+  padding: 24px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-mark {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #3d746c;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+}
+
+.brand h1,
+.brand p {
+  margin: 0;
+}
+
+.brand h1 {
+  font-size: 1.2rem;
+}
+
+.brand p {
+  color: #b0c0cf;
+  font-size: 0.85rem;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nav-item {
+  border: 0;
+  border-radius: 16px;
+  background: transparent;
+  color: #dbe5ee;
+  text-align: left;
+  padding: 15px 16px;
+  cursor: pointer;
+}
+
+.nav-item.active,
+.nav-item:hover {
+  background: #2b6a63;
+  color: white;
+}
+
+.sidebar-status {
+  margin-top: auto;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 18px;
+}
+
+.sidebar-status span {
+  display: block;
+  color: #aebfcb;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+
+.sidebar-status strong {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.sidebar-status p {
+  margin: 0;
+  color: #c8d5df;
+  line-height: 1.5;
+}
+
+.main-area {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.topbar {
+  background: rgba(255, 255, 255, 0.94);
+  border-bottom: 1px solid #dfddd8;
+  padding: 18px 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+}
+
+.topbar h2,
+.topbar p {
+  margin: 0;
+}
+
+.topbar p {
+  color: #6b8191;
+  margin-top: 6px;
+}
+
+.global-search {
+  width: min(380px, 100%);
+  border: 1px solid #d6dbd6;
+  border-radius: 16px;
+  padding: 14px 16px;
+  background: #fbfaf7;
+}
+
+.banner {
+  margin: 16px 24px 0;
+  padding: 12px 16px;
+  border-radius: 14px;
+  background: #e7f4ef;
+  color: #264e49;
+}
+
+.banner.error {
+  background: #fbe9e7;
+  color: #9d3d3b;
+}
+
+.page-scroll {
+  flex: 1;
+  overflow: auto;
+  padding: 22px;
+}
+
+.content-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.dashboard-grid {
+  grid-template-columns: 2fr 1fr;
+}
+
+.players-grid,
+.teams-grid,
+.predict-grid,
+.intelligence-grid,
+.scorer-grid {
+  grid-template-columns: 1.2fr 1fr;
+}
+
+.settings-grid {
+  grid-template-columns: 1fr 1fr;
+}
+
+.kpi-row {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #dddcd7;
+  border-radius: 24px;
+  padding: 22px;
+  box-shadow: 0 10px 30px rgba(18, 48, 75, 0.05);
+  min-width: 0;
+}
+
+.kpi-card span,
+.eyebrow {
+  color: #718392;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+}
+
+.kpi-card strong {
+  display: block;
+  margin-top: 12px;
+  font-size: 1.8rem;
+}
+
+.hero-card {
+  background: linear-gradient(135deg, #eef8f3 0%, #f9fcfb 100%);
+}
+
+.hero-card h3,
+.player-hero h3,
+.card h3 {
+  margin: 10px 0 8px;
+  font-size: 1.4rem;
+}
+
+.hero-card p,
+.player-hero p,
+.card p {
+  color: #5f7383;
+  line-height: 1.6;
+}
+
+.wide-card {
+  grid-column: 1 / -1;
+}
+
+.prediction-inline {
+  margin-top: 18px;
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(20, 52, 82, 0.08);
+}
+
+.prediction-inline span {
+  display: block;
+  color: #718392;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+}
+
+.prediction-inline strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 1.5rem;
+}
+
+.scorer-scoreboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 18px;
+  background: linear-gradient(135deg, #10263f 0%, #27645d 100%);
+  color: white;
+}
+
+.scorer-scoreboard h3 {
+  margin: 8px 0;
+  font-size: clamp(2.4rem, 6vw, 5.2rem);
+  line-height: 1;
+}
+
+.scorer-scoreboard p,
+.scorer-scoreboard .eyebrow {
+  color: #d8e7e2;
+}
+
+.scoreboard-pair {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(2, minmax(160px, 1fr));
+  min-width: min(520px, 100%);
+}
+
+.scoreboard-pair .stat-box {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.scoreboard-pair .stat-box span,
+.scoreboard-pair .stat-box strong {
+  color: white;
+}
+
+.scoring-pad {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.scoring-pad button {
+  min-height: 54px;
+  border: 1px solid #d8ddd7;
+  border-radius: 14px;
+  background: #f7fbf8;
+  color: #10263f;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.scoring-pad button:hover {
+  border-color: #2b6a63;
+  background: #e9f5f0;
+}
+
+.scoring-pad button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.scoring-pad .danger-button {
+  background: #fbe9e7;
+  color: #9d3d3b;
+  border-color: #f3c4bf;
+}
+
+.scorer-prompt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  border-color: #d1b36c;
+  background: #fff8e7;
+}
+
+.scorer-prompt h3 {
+  margin: 6px 0;
+}
+
+.scorer-prompt p {
+  margin: 0;
+  color: #6c5d3b;
+}
+
+.scorer-prompt .filter-row {
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.scorer-prompt input {
+  min-width: min(320px, 100%);
+  background: white;
+}
+
+.scorer-note {
+  margin: 12px 0 0;
+  color: #9d3d3b;
+  font-weight: 700;
+}
+
+.scorer-actions {
+  margin-top: 16px;
+}
+
+.filters-card {
+  grid-column: 1 / -1;
+}
+
+.filter-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.filter-row + .filter-row {
+  margin-top: 14px;
+}
+
+.filter-row input,
+.filter-row select,
+.filter-row button {
+  border-radius: 14px;
+  border: 1px solid #d8ddd7;
+  padding: 12px 14px;
+  background: white;
+}
+
+.filter-row button {
+  background: #143452;
+  color: white;
+  border-color: #143452;
+  cursor: pointer;
+}
+
+.stats-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 18px;
+}
+
+.stat-box {
+  background: #f6faf8;
+  border: 1px solid #dbe6e1;
+  border-radius: 18px;
+  padding: 14px;
+}
+
+.stat-box span {
+  display: block;
+  color: #718392;
+  font-size: 0.85rem;
+}
+
+.stat-box strong {
+  display: block;
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+.table-wrap {
+  overflow: auto;
+}
+
+.dual-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.dual-grid h4 {
+  margin: 0 0 12px;
+}
+
+.json-preview {
+  margin: 0;
+  padding: 16px;
+  border-radius: 18px;
+  background: #10263f;
+  color: #e5edf5;
+  overflow: auto;
+  max-height: 360px;
+}
+
+.json-preview.empty {
+  background: #f6faf8;
+  color: #5f7383;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+}
+
+th,
+td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #e7e8e4;
+  text-align: left;
+  white-space: nowrap;
+}
+
+th {
+  color: #657b8c;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+@media (max-width: 1200px) {
+  .app-shell {
+    grid-template-columns: 230px 1fr;
+  }
+
+  .dashboard-grid,
+  .players-grid,
+  .teams-grid,
+  .scorer-grid,
+  .intelligence-grid,
+  .settings-grid,
+  .kpi-row {
+    grid-template-columns: 1fr;
+  }
+
+  .dual-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .scorer-scoreboard,
+  .scoreboard-pair {
+    grid-template-columns: 1fr;
+  }
+
+  .scorer-scoreboard {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 860px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    padding-bottom: 12px;
+  }
+
+  .topbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .global-search {
+    width: 100%;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .scoring-pad {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
